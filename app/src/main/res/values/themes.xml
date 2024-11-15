@@ -1,7 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
     <style name="Base.Theme.TarotApp" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="materialButtonStyle">@style/ButtonDefaultStyle</item>
+        <item name="android:textViewStyle">@style/TextDefaultStyle</item>
     </style>
 
     <style name="Theme.TarotApp" parent="Base.Theme.TarotApp" />
@@ -9,5 +9,12 @@
     <style name="ButtonDefaultStyle" parent="Widget.Material3.Button">
         <item name="backgroundTint">@color/orange</item>
         <item name="cornerRadius">12dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextDefaultStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/light_grey</item>
     </style>
 </resources>
