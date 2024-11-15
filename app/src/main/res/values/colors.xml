@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#363636</color>
+    <color name="grey">#999999</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#FF992A</color>
+    <color name="red">#F2542F</color>
+    <color name="green">#0C6666</color>
+    <color name="dark_blue">#1E212D</color>
+    <color name="papaya_whip">#FFEDD7</color>
+</resources>
