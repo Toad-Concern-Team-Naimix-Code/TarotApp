@@ -93,7 +93,7 @@
 
                     <AutoCompleteTextView
                             android:id="@+id/spinner_company"
-                            android:inputType="phone"
+                            android:inputType="none"
                             android:hint="@string/company_hint"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
@@ -128,7 +128,7 @@
 
                     <AutoCompleteTextView
                             android:id="@+id/spinner_department"
-                            android:inputType="phone"
+                            android:inputType="none"
                             android:hint="@string/department_hint"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />

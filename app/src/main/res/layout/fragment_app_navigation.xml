@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:fitsSystemWindows="true"
         android:background="@color/papaya_whip"
         tools:context=".view.fragments.FragmentNavigation">
@@ -31,8 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:menu="@menu/menu_navigation_bar"
-                android:background="@color/blue"
-                style="@style/Widget.MaterialComponents.BottomNavigationView"
+                android:background="@drawable/rounded_corners"
+                style="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface"
                 android:selectableItemBackground="@drawable/nav_selector"
                 app:itemIconTint="@drawable/nav_selector"
                 app:itemTextColor="@drawable/nav_selector"

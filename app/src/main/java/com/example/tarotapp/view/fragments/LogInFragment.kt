@@ -28,7 +28,7 @@ class LogInFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_logInFragment_to_fragmentNavigation)
+            findNavController().navigate(R.id.action_logInFragment_to_navigation_graph)
         }
     }
 
