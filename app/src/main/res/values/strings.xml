@@ -5,4 +5,13 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Далее</string>
     <string name="previous">Назад</string>
+    <string name="name">ФИО</string>
+    <string name="name_hint">Бильбо Бэггинс</string>
+    <string name="mail">Почта</string>
+    <string name="mail_hint">name@mail.ru</string>
+    <string name="phone">Телефон</string>
+    <string name="phone_hint">+7</string>
+    <string name="password">Пароль</string>
+    <string name="create_password">Создайте пароль</string>
+    <string name="confirm_password">Подтвердите пароль</string>
 </resources>

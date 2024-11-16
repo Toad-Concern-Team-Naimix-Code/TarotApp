@@ -2,12 +2,12 @@
     <style name="Base.Theme.TarotApp" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="materialButtonStyle">@style/ButtonDefaultStyle</item>
         <item name="android:textViewStyle">@style/TextDefaultStyle</item>
+        <item name="colorPrimary">@color/orange</item>
     </style>
 
     <style name="Theme.TarotApp" parent="Base.Theme.TarotApp" />
 
     <style name="ButtonDefaultStyle" parent="Widget.Material3.Button">
-        <item name="backgroundTint">@color/orange</item>
         <item name="cornerRadius">12dp</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
