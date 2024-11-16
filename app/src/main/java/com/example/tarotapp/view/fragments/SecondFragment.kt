@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
 import com.example.tarotapp.R
 import com.example.tarotapp.databinding.FragmentSecondBinding
@@ -22,12 +23,18 @@ class SecondFragment : Fragment() {
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val companies = resources.getStringArray(R.array.companies)
+        val companiesAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_intem, companies)
+        binding.spinnerCompany.setAdapter(companiesAdapter)
 
+
+        val departments = resources.getStringArray(R.array.departments)
+        val departmentsAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_intem, departments)
+        binding.spinnerDepartment.setAdapter(departmentsAdapter)
     }
 
     override fun onDestroyView() {

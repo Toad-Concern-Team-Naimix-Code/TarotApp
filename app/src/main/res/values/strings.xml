@@ -4,7 +4,10 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Далее</string>
-    <string name="previous">Назад</string>
+    <string name="back">Назад</string>
+    <string name="registration">Регистрация</string>
+    <string name="create_account">Создайте аккаунт</string>
+    <string name="compatibility_data">Эти данные необходимы для определения совместимости</string>
     <string name="name">ФИО</string>
     <string name="name_hint">Бильбо Бэггинс</string>
     <string name="mail">Почта</string>
@@ -14,4 +17,26 @@
     <string name="password">Пароль</string>
     <string name="create_password">Создайте пароль</string>
     <string name="confirm_password">Подтвердите пароль</string>
+    <string name="birth_date">Дата рождения</string>
+    <string name="birth_date_hint">25.05.95</string>
+    <string name="company">Компания</string>
+    <string name="company_hint">Выберите компанию</string>
+    <string name="department">Отдел</string>
+    <string name="department_hint">Выберите отдел</string>
+    <string name="role">Роль</string>
+    <string name="candidate">Кандидат</string>
+    <string name="hr">HR</string>
+    <string name="register">Зарегестрироваться</string>
+
+    <string-array name="companies">
+        <item>ООО "Таро"</item>
+        <item>ЗАО "Шут"</item>
+        <item>ООО "Пентакли"</item>
+        <item>АО "Король кубков"</item>
+    </string-array>
+
+    <string-array name="departments">
+        <item>Гадания</item>
+        <item>Натальные карты</item>
+    </string-array>
 </resources>
