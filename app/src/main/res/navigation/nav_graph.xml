@@ -24,6 +24,9 @@
         <action
                 android:id="@+id/action_SecondFragment_to_FirstFragment"
                 app:destination="@id/FirstFragment" />
+        <action
+                android:id="@+id/action_SecondFragment_to_fragmentNavigation"
+                app:destination="@id/fragmentNavigation" />
     </fragment>
     <fragment
             android:id="@+id/startFragment"
@@ -41,5 +44,14 @@
             android:id="@+id/logInFragment"
             android:name="com.example.tarotapp.view.fragments.LogInFragment"
             android:label="LogInFragment"
-            tools:layout="@layout/fragment_log_in"  />
+            tools:layout="@layout/fragment_log_in"  >
+        <action
+                android:id="@+id/action_logInFragment_to_fragmentNavigation"
+                app:destination="@id/fragmentNavigation" />
+    </fragment>
+    <fragment
+            android:id="@+id/fragmentNavigation"
+            android:name="com.example.tarotapp.view.fragments.FragmentNavigation"
+            android:label="fragment_app_navigation"
+            tools:layout="@layout/fragment_app_navigation" />
 </navigation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fitsSystemWindows="true"
+        android:background="@color/papaya_whip"
+        tools:context=".view.fragments.FragmentNavigation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/nav_host_fragment_navigation_app"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:defaultNavHost="false"
+                app:navGraph="@navigation/main_app_nav_graph" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/buttonNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:menu="@menu/menu_navigation_bar"
+                android:background="@color/blue"
+                style="@style/Widget.MaterialComponents.BottomNavigationView"
+                android:selectableItemBackground="@drawable/nav_selector"
+                app:itemIconTint="@drawable/nav_selector"
+                app:itemTextColor="@drawable/nav_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:labelVisibilityMode="labeled" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

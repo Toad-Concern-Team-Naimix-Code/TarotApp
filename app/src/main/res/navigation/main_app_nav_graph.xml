@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main_app_nav_graph"
+        app:startDestination="@id/fragmentMain">
+
+    <fragment
+            android:id="@+id/fragmentMain"
+            android:name="com.example.tarotapp.view.fragments.FragmentMain"
+            android:label="FragmentMain"
+            tools:layout="@layout/fragment_main" />
+    <fragment
+            android:id="@+id/fragmentCandidates"
+            android:name="com.example.tarotapp.view.fragments.FragmentCandidates"
+            android:label="FragmentCandidates"
+            tools:layout="@layout/fragment_candidates" />
+    <fragment
+            android:id="@+id/fragmentColleagues"
+            android:name="com.example.tarotapp.view.fragments.FragmentColleagues"
+            android:label="FragmentColleagues"
+            tools:layout="@layout/fragment_candidates" />
+    <fragment
+            android:id="@+id/fragmentProfile"
+            android:name="com.example.tarotapp.view.fragments.FragmentProfile"
+            android:label="FragmentProfile"
+            tools:layout="@layout/fragment_profile" />
+</navigation>

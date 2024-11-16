@@ -35,6 +35,11 @@ class SecondFragment : Fragment() {
         val departments = resources.getStringArray(R.array.departments)
         val departmentsAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_intem, departments)
         binding.spinnerDepartment.setAdapter(departmentsAdapter)
+
+
+        binding.buttonFirst.setOnClickListener {
+            findNavController().navigate(R.id.action_SecondFragment_to_fragmentNavigation)
+        }
     }
 
     override fun onDestroyView() {

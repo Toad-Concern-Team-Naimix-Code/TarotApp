@@ -1,12 +1,11 @@
 package com.example.tarotapp.view.activity
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.MenuItem
 import com.example.tarotapp.R
 import com.example.tarotapp.databinding.ActivityMainBinding
 
