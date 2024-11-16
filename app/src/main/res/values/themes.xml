@@ -3,6 +3,10 @@
         <item name="materialButtonStyle">@style/ButtonDefaultStyle</item>
         <item name="android:textViewStyle">@style/TextDefaultStyle</item>
         <item name="colorPrimary">@color/orange</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.TarotApp" parent="Base.Theme.TarotApp" />

@@ -7,13 +7,13 @@
             android:orderInCategory="100" />
 
     <item
-            android:id="@+id/fragmentCandidates"
+            android:id="@+id/fragmentColleagues"
             android:title="@string/colleagues"
             android:icon="@drawable/colleagues_icon"
             android:orderInCategory="150" />
 
     <item
-            android:id="@+id/fragmentColleagues"
+            android:id="@+id/fragmentCandidates"
             android:title="@string/candidates"
             android:icon="@drawable/candidates_icon"
             android:orderInCategory="200" />
