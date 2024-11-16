@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.tarotapp.R
+import com.example.tarotapp.databinding.FragmentLogInBinding
 import com.example.tarotapp.databinding.FragmentStartBinding
 
-class StartFragment : Fragment() {
+class LogInFragment: Fragment() {
 
-    private var _binding: FragmentStartBinding? = null
+    private var _binding: FragmentLogInBinding? = null
 
     private val binding get() = _binding!!
 
@@ -19,18 +20,12 @@ class StartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentStartBinding.inflate(inflater, container, false)
+        _binding = FragmentLogInBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.start.setOnClickListener {
-            findNavController().navigate(R.id.action_startFragment_to_FirstFragment)
-        }
-        binding.login.setOnClickListener {
-            findNavController().navigate(R.id.action_startFragment_to_logInFragment)
-        }
     }
 
     override fun onDestroyView() {

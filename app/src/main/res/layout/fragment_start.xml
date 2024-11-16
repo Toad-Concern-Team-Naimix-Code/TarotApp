@@ -4,14 +4,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/papaya_whip"
         tools:context=".view.fragments.StartFragment">
 
+    <TextView
+            android:id="@+id/tarot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/taro_recruit"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/namix" />
+
+    <TextView
+            android:id="@+id/namix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/description"
+            android:fontFamily="@font/oranienbaum" />
+
+    <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/description"
+            android:textColor="@color/grey"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/start" />
+    
     <Button
             android:id="@+id/start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
-            android:text="Приступим"
+            android:backgroundTint="@color/red"
+            android:text="@string/start"
             app:layout_constraintBottom_toTopOf="@+id/login" />
 
     <Button
@@ -19,7 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
-            android:text="Войти"
+            android:background="@android:color/transparent"
+            android:textColor="@color/light_black"
+            android:text="@string/log_in"
             app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

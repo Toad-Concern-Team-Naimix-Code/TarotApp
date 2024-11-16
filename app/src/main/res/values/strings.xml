@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">TarotApp</string>
+    <string name="app_name">Наймикс</string>
+    <string name="taro_recruit">Рекрутинг Таро</string>
     <string name="action_settings">Settings</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="description">Инновационный инструмент для рекрутеров оценивает совместимость между коллегами, руководителями и подчиненными, кандидатами и компаниями</string>
+    <string name="start">Приступим</string>
+    <string name="log_in">Войти</string>
     <string name="next">Далее</string>
     <string name="back">Назад</string>
     <string name="registration">Регистрация</string>
