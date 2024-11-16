@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.tarotapp.R
-import com.example.tarotapp.databinding.FragmentCandidatesBinding
+import com.example.tarotapp.databinding.FragmentAddCandidateBinding
+import com.example.tarotapp.databinding.FragmentStartBinding
 
-class FragmentCandidates : Fragment() {
+class FragmentAddCandidate : Fragment() {
 
-    private var _binding: FragmentCandidatesBinding? = null
+    private var _binding: FragmentAddCandidateBinding? = null
 
     private val binding get() = _binding!!
 
@@ -19,14 +20,14 @@ class FragmentCandidates : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCandidatesBinding.inflate(inflater, container, false)
+        _binding = FragmentAddCandidateBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentCandidates_to_fragmentAddCandidate)
+        binding.close.setOnClickListener {
+            findNavController().popBackStack()
         }
     }
 
