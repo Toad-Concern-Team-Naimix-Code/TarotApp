@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -31,9 +32,12 @@ class FragmentCandidates : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentCandidates_to_fragmentAddCandidate)
+            findNavController().navigate(R.id.action_fragmentCandidates2_to_fragmentAddCandidate)
         }
         val adapter = CandidatesAdapter(requireContext())
+        adapter.listener = View.OnClickListener {
+            findNavController().navigate(R.id.action_fragmentCandidates2_to_fragmentCandidateProfile)
+        }
         adapter.setItems(getItems())
         binding.candidates.adapter = adapter
     }

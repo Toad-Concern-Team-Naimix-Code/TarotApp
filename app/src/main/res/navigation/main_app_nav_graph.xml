@@ -11,15 +11,6 @@
             android:label="FragmentMain"
             tools:layout="@layout/fragment_main" />
     <fragment
-            android:id="@+id/fragmentCandidates"
-            android:name="com.example.tarotapp.view.fragments.FragmentCandidates"
-            android:label="FragmentCandidates"
-            tools:layout="@layout/fragment_candidates" >
-        <action
-                android:id="@+id/action_fragmentCandidates_to_fragmentAddCandidate"
-                app:destination="@id/fragmentAddCandidate" />
-    </fragment>
-    <fragment
             android:id="@+id/fragmentColleagues"
             android:name="com.example.tarotapp.view.fragments.FragmentColleagues"
             android:label="FragmentColleagues"
@@ -29,9 +20,5 @@
             android:name="com.example.tarotapp.view.fragments.FragmentProfile"
             android:label="FragmentProfile"
             tools:layout="@layout/fragment_profile" />
-    <fragment
-            android:id="@+id/fragmentAddCandidate"
-            android:name="com.example.tarotapp.view.fragments.FragmentAddCandidate"
-            android:label="fragment_add_candidate"
-            tools:layout="@layout/fragment_add_candidate" />
+    <include app:graph="@navigation/candidates_graph" />
 </navigation>

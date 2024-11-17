@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.tarotapp.databinding.FragmentProfileBinding
+import com.example.tarotapp.R
+import com.example.tarotapp.databinding.FragmentCandidateProfileBinding
 
-class FragmentProfile : Fragment() {
+class FragmentCandidateProfile : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
+    private var _binding: FragmentCandidateProfileBinding? = null
 
     private val binding get() = _binding!!
 
@@ -18,12 +19,15 @@ class FragmentProfile : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        _binding = FragmentCandidateProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.calculateCompatibility.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentCandidateProfile_to_fragmentCompatibilityCalculation)
+        }
     }
 
     override fun onDestroyView() {

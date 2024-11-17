@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/candidates_graph"
+        app:startDestination="@id/fragmentCandidates2">
+
+    <fragment
+            android:id="@+id/fragmentCandidates2"
+            android:name="com.example.tarotapp.view.fragments.FragmentCandidates"
+            android:label="FragmentCandidates"
+            tools:layout="@layout/fragment_candidates">
+        <action
+                android:id="@+id/action_fragmentCandidates2_to_fragmentCandidateProfile"
+                app:destination="@id/fragmentCandidateProfile" />
+        <action
+                android:id="@+id/action_fragmentCandidates2_to_fragmentAddCandidate"
+                app:destination="@id/fragmentAddCandidate" />
+    </fragment>
+    <fragment
+            android:id="@+id/fragmentCandidateProfile"
+            android:name="com.example.tarotapp.view.fragments.FragmentCandidateProfile"
+            android:label="FragmentCandidateProfile"
+            tools:layout="@layout/fragment_candidate_profile">
+        <action
+                android:id="@+id/action_fragmentCandidateProfile_to_fragmentCompatibilityCalculation"
+                app:destination="@id/fragmentCompatibilityCalculation" />
+    </fragment>
+    <fragment
+            android:id="@+id/fragmentAddCandidate"
+            android:name="com.example.tarotapp.view.fragments.FragmentAddCandidate"
+            android:label="fragment_add_candidate"
+            tools:layout="@layout/fragment_add_candidate" />
+    <fragment
+            android:id="@+id/fragmentCompatibilityCalculation"
+            android:name="com.example.tarotapp.view.fragments.FragmentCompatibilityCalculation"
+            android:label="FragmentCompatibilityCalculation"
+            tools:layout="@layout/fragment_compatibility_calculation"/>
+</navigation>

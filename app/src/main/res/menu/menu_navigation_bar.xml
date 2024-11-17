@@ -13,7 +13,7 @@
             android:orderInCategory="150" />
 
     <item
-            android:id="@+id/fragmentCandidates"
+            android:id="@+id/candidates_graph"
             android:title="@string/candidates"
             android:icon="@drawable/candidates_icon"
             android:orderInCategory="200" />

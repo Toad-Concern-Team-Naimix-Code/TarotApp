@@ -18,7 +18,8 @@
                 android:src="@drawable/baseline_arrow_back_ios_24"
                 app:layout_constraintTop_toTopOf="@id/back_text"
                 app:layout_constraintBottom_toBottomOf="@id/back_text"
-                app:tint="@color/dark_blue"/>
+                app:tint="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
                 android:id="@+id/back_text"

@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.tarotapp.databinding.FragmentProfileBinding
+import com.example.tarotapp.databinding.FragmentCompatibilityCalculationBinding
 
-class FragmentProfile : Fragment() {
+class FragmentCompatibilityCalculation : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
+    private var _binding: FragmentCompatibilityCalculationBinding? = null
 
     private val binding get() = _binding!!
 
@@ -18,12 +18,15 @@ class FragmentProfile : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        _binding = FragmentCompatibilityCalculationBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.back.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     override fun onDestroyView() {

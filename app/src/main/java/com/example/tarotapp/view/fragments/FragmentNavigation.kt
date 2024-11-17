@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.tarotapp.R
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -28,7 +30,15 @@ class FragmentNavigation : Fragment() {
         val navHostFragment = childFragmentManager.findFragmentById(R.id.nav_host_fragment_navigation_app) as NavHostFragment
         val navController = navHostFragment.navController
         binding.buttonNavigation.setupWithNavController(navController)
+        onButtonNavigationBarClicks(navController)
         return binding.root
+    }
+
+    private fun onButtonNavigationBarClicks(navController: NavController) {
+        binding.buttonNavigation.setOnItemSelectedListener { item ->
+            navController.navigate(item.itemId)
+            true
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

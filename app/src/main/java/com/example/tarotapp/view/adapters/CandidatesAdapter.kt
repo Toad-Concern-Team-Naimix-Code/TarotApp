@@ -15,7 +15,7 @@ import com.example.tarotapp.entitty.Candidate
 class CandidatesAdapter(context: Context) : RecyclerView.Adapter<CandidatesAdapter.CandidateViewHolder>() {
     private val candidates: MutableList<Candidate> = mutableListOf()
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    var listener: AdapterView.OnItemClickListener? = null
+    var listener: View.OnClickListener? = null
 
     class CandidateViewHolder(val view: View) : ViewHolder(view) {
         var binding: ItemCandidatesBinding? = DataBindingUtil.bind(view)
@@ -38,5 +38,8 @@ class CandidatesAdapter(context: Context) : RecyclerView.Adapter<CandidatesAdapt
     override fun onBindViewHolder(holder: CandidateViewHolder, position: Int) {
         val candidate = candidates[position]
         holder.binding?.candidate = candidate
+        holder.binding?.root?.setOnClickListener { view ->
+            listener?.onClick(view)
+        }
     }
 }
