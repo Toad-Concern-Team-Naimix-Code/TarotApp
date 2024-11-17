@@ -32,7 +32,7 @@ class FragmentColleagues : Fragment() {
         binding.colleagues.adapter = adapter
     }
 
-    fun getItems(): List<Colleague> {
+    private fun getItems(): List<Colleague> {
         val colleague = Colleague(
             cardIcon = ResourcesCompat.getDrawable(resources, R.drawable.jester, null),
             name = "Бильбо Бэггинс",

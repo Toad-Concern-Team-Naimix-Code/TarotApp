@@ -3,9 +3,10 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
-                name="collegue"
-                type="com.example.tarotapp.entitty.Colleague" />
+                name="candidate"
+                type="com.example.tarotapp.entitty.Candidate" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,6 +19,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 app:cardCornerRadius="60dp"
+                android:padding="4dp"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -26,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="12dp"
-                    android:src="@{collegue.cardIcon}"
+                    android:src="@{candidate.cardIcon}"
                     android:background="@color/orange"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:text="@{collegue.name}"
+                android:text="@{candidate.name}"
                 android:textStyle="bold"
                 android:layout_marginStart="16dp"
                 app:layout_constraintStart_toEndOf="@id/icon"
@@ -50,10 +52,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:textStyle="bold"
-                android:text="@{collegue.company}"
+                android:text="@{candidate.company}"
                 android:textColor="@color/orange"
                 app:layout_constraintStart_toEndOf="@id/icon"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 app:layout_constraintBottom_toBottomOf="@id/icon" />
+
+        <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/delete_icon"
+                app:tint="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/icon"
+                app:layout_constraintTop_toTopOf="@+id/icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
