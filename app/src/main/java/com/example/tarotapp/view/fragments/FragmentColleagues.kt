@@ -4,8 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
+import com.example.tarotapp.R
 import com.example.tarotapp.databinding.FragmentColleguesBinding
+import com.example.tarotapp.entitty.Colleague
+import com.example.tarotapp.view.adapters.ColleagueAdapter
 
 class FragmentColleagues : Fragment() {
 
@@ -23,6 +27,22 @@ class FragmentColleagues : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val adapter = ColleagueAdapter(requireContext())
+        adapter.setItems(getItems())
+        binding.colleagues.adapter = adapter
+    }
+
+    fun getItems(): List<Colleague> {
+        val colleague = Colleague(
+            cardIcon = ResourcesCompat.getDrawable(resources, R.drawable.jester, null),
+            name = "Бильбо Бэггинс",
+            company = "OOO Таро"
+        )
+        val list = mutableListOf(colleague)
+        for (i in 0..10) {
+            list.add(colleague)
+        }
+        return list
     }
 
     override fun onDestroyView() {

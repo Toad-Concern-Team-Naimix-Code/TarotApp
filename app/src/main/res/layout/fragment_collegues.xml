@@ -6,9 +6,10 @@
         android:layout_height="match_parent"
         tools:context=".view.fragments.FirstFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:layout_gravity="top"
             android:padding="16dp">
 
@@ -22,41 +23,13 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:fontFamily="@font/forum" />
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/colleagues"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/registration">
-            <include
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    layout="@layout/item_person"/>
-            <include
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    layout="@layout/item_person"/>
-            <include
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    layout="@layout/item_person"/>
-            <include
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    layout="@layout/item_person"/>
-            <include
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    layout="@layout/item_person"/>
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-            <include
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    layout="@layout/item_person"/>
-            <include
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    layout="@layout/item_person"/>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -84,7 +84,7 @@
 
             <TextView
                     android:id="@+id/registration"
-                    android:text="Карта дня"
+                    android:text="Аркан"
                     android:textSize="24sp"
                     android:layout_width="match_parent"
                     android:gravity="center"
@@ -118,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
-                    android:text="Шут"
+                    android:text="Фортуна"
                     android:textSize="32sp"
                     android:textColor="@color/black"
                     android:gravity="center"
@@ -130,7 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="Эта карта говорит: «Не бойся начать с нуля!». Шут всегда готов к новым приключениям. Его девиз – рискни или потеряешь шанс"
+                    android:text="Фортуна – символ перемен. Что-то неожиданное уже на подходе!"
                     android:textColor="@color/grey"
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@id/card" />
