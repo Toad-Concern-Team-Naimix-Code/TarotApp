@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.tarotapp.R
 import com.example.tarotapp.databinding.FragmentAddCandidateBinding
-import com.example.tarotapp.databinding.FragmentStartBinding
 
 class FragmentAddCandidate : Fragment() {
 

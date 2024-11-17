@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/colleague_graph"
+        app:startDestination="@id/fragmentColleagues2">
+
+    <fragment
+            android:id="@+id/fragmentColleagues2"
+            android:name="com.example.tarotapp.view.fragments.FragmentColleagues"
+            android:label="FragmentColleagues"
+            tools:layout="@layout/fragment_collegues">
+        <action
+                android:id="@+id/action_fragmentColleagues2_to_fragmentColleagueProfile"
+                app:destination="@id/fragmentColleagueProfile" />
+    </fragment>
+    <fragment
+            android:id="@+id/fragmentColleagueProfile"
+            android:name="com.example.tarotapp.view.fragments.FragmentColleagueProfile"
+            android:label="FragmentColleagueProfile"
+            tools:layout="@layout/fragment_colleague_profile" >
+        <action
+                android:id="@+id/action_fragmentColleagueProfile_to_fragmentCompatibilityCalculation2"
+                app:destination="@id/fragmentCompatibilityCalculation2" />
+    </fragment>
+    <fragment
+            android:id="@+id/fragmentCompatibilityCalculation2"
+            android:name="com.example.tarotapp.view.fragments.FragmentCompatibilityCalculation"
+            android:label="FragmentCompatibilityCalculation"
+            tools:layout="@layout/fragment_compatibility_calculation"/>
+</navigation>

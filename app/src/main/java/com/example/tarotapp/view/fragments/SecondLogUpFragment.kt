@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.tarotapp.R
 import com.example.tarotapp.databinding.FragmentSecondBinding
 
-class SecondFragment : Fragment() {
+class SecondLogUpFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
 

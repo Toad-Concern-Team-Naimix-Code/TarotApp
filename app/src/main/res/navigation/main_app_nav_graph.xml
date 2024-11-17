@@ -21,4 +21,5 @@
             android:label="FragmentProfile"
             tools:layout="@layout/fragment_profile" />
     <include app:graph="@navigation/candidates_graph" />
+    <include app:graph="@navigation/colleague_graph" />
 </navigation>

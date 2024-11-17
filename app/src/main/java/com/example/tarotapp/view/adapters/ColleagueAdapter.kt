@@ -5,7 +5,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -15,7 +14,7 @@ import com.example.tarotapp.entitty.Colleague
 class ColleagueAdapter(context: Context) : RecyclerView.Adapter<ColleagueAdapter.ColleagueViewHolder>() {
     private val colleague: MutableList<Colleague> = mutableListOf()
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    var listener: AdapterView.OnItemClickListener? = null
+    var listener: View.OnClickListener? = null
 
     class ColleagueViewHolder(val view: View) : ViewHolder(view) {
         var binding: ItemColleagueBinding? = DataBindingUtil.bind(view)
@@ -38,5 +37,8 @@ class ColleagueAdapter(context: Context) : RecyclerView.Adapter<ColleagueAdapter
     override fun onBindViewHolder(holder: ColleagueViewHolder, position: Int) {
         val colleague = colleague[position]
         holder.binding?.collegue = colleague
+        holder.binding?.root?.setOnClickListener { view ->
+            listener?.onClick(view)
+        }
     }
 }

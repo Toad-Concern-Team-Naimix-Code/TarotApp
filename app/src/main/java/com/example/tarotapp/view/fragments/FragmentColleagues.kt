@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.tarotapp.R
 import com.example.tarotapp.databinding.FragmentColleguesBinding
 import com.example.tarotapp.entitty.Colleague
@@ -29,6 +30,9 @@ class FragmentColleagues : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val adapter = ColleagueAdapter(requireContext())
         adapter.setItems(getItems())
+        adapter.listener = View.OnClickListener {
+            findNavController().navigate(R.id.action_fragmentColleagues2_to_fragmentColleagueProfile)
+        }
         binding.colleagues.adapter = adapter
     }
 

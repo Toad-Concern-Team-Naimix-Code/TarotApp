@@ -28,6 +28,9 @@ class FragmentCandidateProfile : Fragment() {
         binding.calculateCompatibility.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentCandidateProfile_to_fragmentCompatibilityCalculation)
         }
+        binding.back.root.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     override fun onDestroyView() {

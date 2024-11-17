@@ -1,16 +1,17 @@
 package com.example.tarotapp.view.fragments
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.tarotapp.databinding.FragmentCompatibilityCalculationBinding
+import com.example.tarotapp.R
+import com.example.tarotapp.databinding.FragmentFirstBinding
 
-class FragmentCompatibilityCalculation : Fragment() {
+class FirstLogUpFragment : Fragment() {
 
-    private var _binding: FragmentCompatibilityCalculationBinding? = null
+    private var _binding: FragmentFirstBinding? = null
 
     private val binding get() = _binding!!
 
@@ -18,14 +19,16 @@ class FragmentCompatibilityCalculation : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCompatibilityCalculationBinding.inflate(inflater, container, false)
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.back.root.setOnClickListener {
-            findNavController().popBackStack()
+
+        binding.buttonFirst.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }
 
